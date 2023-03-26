@@ -61,7 +61,7 @@ export default class MomentsController {
     moment.title = body.title
     moment.description = body.description
 
-    if (moment.image != body.image || !moment.image) {
+    if (moment.image !== body.image || !moment.image) {
       const image = request.file('image', this.validationOptions)
 
       if (image) {
